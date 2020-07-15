@@ -3,12 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/FAMILIA/Desktop/Universidad%20distrital/Cuarto%20semestre/Modelos%20de%20Programacion/tarea%2015%20patron%20Proxy/presentar/backend/Cajero/src/conf/MANIFEST.MF</file>
-            <file>file:/C:/Users/FAMILIA/Desktop/Universidad%20distrital/Cuarto%20semestre/Modelos%20de%20Programacion/tarea%2015%20patron%20Proxy/presentar/backend/Cajero/src/java/Servlet/form.java</file>
-            <file>file:/C:/Users/FAMILIA/Desktop/Universidad%20distrital/Cuarto%20semestre/Modelos%20de%20Programacion/tarea%2015%20patron%20Proxy/presentar/backend/Cajero/src/java/RealSubject/Machine.java</file>
-            <file>file:/C:/Users/FAMILIA/Desktop/Universidad%20distrital/Cuarto%20semestre/Modelos%20de%20Programacion/tarea%2015%20patron%20Proxy/presentar/backend/Cajero/src/java/Abstract/Atm.java</file>
-            <file>file:/C:/Users/FAMILIA/Desktop/Universidad%20distrital/Cuarto%20semestre/Modelos%20de%20Programacion/tarea%2015%20patron%20Proxy/presentar/backend/Cajero/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/FAMILIA/Desktop/Universidad%20distrital/Cuarto%20semestre/Modelos%20de%20Programacion/tarea%2015%20patron%20Proxy/presentar/backend/Cajero/web/index.html</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/web/index.jsp</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/proxy/ClientProxy.java</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/Servlet/Redirect.java</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/web/Error2.jsp</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/web/css/style.css</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/Protection/Client.java</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/web/Error1.jsp</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/Servlet/RegisterPage.java</file>
+            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/Servlet/LandingPage.java</file>
         </group>
     </open-files>
 </project-private>

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet(name = "landingpage", urlPatterns = {"/landingpage"})
-public class landingpage extends HttpServlet {
+public class LandingPage extends HttpServlet {
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,8 +32,9 @@ public class landingpage extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         //Datos enviados desde el formulario en el index.jsp
-        int account = Integer.parseInt(request.getParameter("cuenta-usuario"));
-        String password = request.getParameter("password-user");
+
+        
+        
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */

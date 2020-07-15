@@ -25,7 +25,7 @@ public class ClientProxy implements IClient{
     public String loginState(int IDCuenta, String password) {
        
         if(client.containsKey(IDCuenta)){
-            if(client.get(IDCuenta).getPassword()==password){
+            if(client.get(IDCuenta).getPassword().equals(password)){
                 System.out.println(client.get(IDCuenta).loginState(IDCuenta, password));;
                 return "Se ha accedido de forma satisfactoria a la cuenta";       
             }

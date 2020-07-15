@@ -46,7 +46,7 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                    <form action="landingpage" method="POST">
+                    <form action="Redirect" method="POST">
                         <div class="form-group">
                           <label for="nombre-usuario">Cuenta</label>
                           <input type="number" class="form-control" id="nombre-usuario" name="nombre-usuario" aria-describedby="emailHelp" required>

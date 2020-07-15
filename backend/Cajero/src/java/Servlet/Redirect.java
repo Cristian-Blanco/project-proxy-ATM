@@ -3,22 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package Servlet;
 
+import Protection.IClient;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import proxy.ClientProxy;
 
 /**
  *
- * @author Cristian
+ * @author jackl
  */
-@WebServlet(name = "redireccionar", urlPatterns = {"/redireccionar"})
-public class redireccionar extends HttpServlet {
+public class Redirect extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,17 +33,11 @@ public class redireccionar extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet redireccionar</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet redireccionar at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        IClient proxie = new ClientProxy();
+        if(proxie.loginState(Integer.parseInt(request.getParameter("nombre-usuario")), request.getParameter("password-user")).equals("Se ha accedido de forma satisfactoria a la cuenta")){
+            response.sendRedirect("LandingPage");
+        }else{
+            response.sendRedirect("index_1.jsp");
         }
     }
 

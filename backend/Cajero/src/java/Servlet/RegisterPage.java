@@ -20,7 +20,7 @@ import proxy.ClientProxy;
  * @author Cristian
  */
 @WebServlet(name = "registerpage", urlPatterns = {"/registerpage"})
-public class registerpage extends HttpServlet {
+public class RegisterPage extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

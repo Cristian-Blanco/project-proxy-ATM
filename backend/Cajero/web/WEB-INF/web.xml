@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>landingpage</servlet-name>
+        <servlet-name>LandingPage</servlet-name>
         <servlet-class>Servlet.LandingPage</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterPage</servlet-name>
+        <servlet-class>Servlet.RegisterPaget</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Redirect</servlet-name>
         <servlet-class>Servlet.Redirect</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Amount</servlet-name>
+        <servlet-class>Servlet.Amount</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>landingpage</servlet-name>
-        <url-pattern>/landingpage</url-pattern>
+        <servlet-name>LandingPage</servlet-name>
+        <url-pattern>/LandingPage</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Redirect</servlet-name>
         <url-pattern>/Redirect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Amount</servlet-name>
+        <url-pattern>/Amount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterPage</servlet-name>
+        <url-pattern>/RegisterPage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

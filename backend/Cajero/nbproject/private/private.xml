@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/web/index.jsp</file>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/proxy/ClientProxy.java</file>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/Servlet/Redirect.java</file>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/web/Error2.jsp</file>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/web/css/style.css</file>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/Protection/Client.java</file>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/web/Error1.jsp</file>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/Servlet/RegisterPage.java</file>
-            <file>file:/C:/Users/jackl/Documents/Proxy2.0/project-proxy-ATM/backend/Cajero/src/java/Servlet/LandingPage.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

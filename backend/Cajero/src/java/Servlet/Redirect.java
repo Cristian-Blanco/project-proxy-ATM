@@ -8,7 +8,6 @@ package Servlet;
 
 import Protection.IClient;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,23 +20,27 @@ import proxy.ClientProxy;
  */
 public class Redirect extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    int cuenta;
+    String password;
+
+    
+    public int getCuenta() {
+        return cuenta;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        this.cuenta = Integer.parseInt(request.getParameter("nombre-usuario"));
+        this.password = request.getParameter("password-user");
         IClient proxie = new ClientProxy();
         if(proxie.loginState(Integer.parseInt(request.getParameter("nombre-usuario")), request.getParameter("password-user")).equals("Se ha accedido de forma satisfactoria a la cuenta")){
             response.sendRedirect("LandingPage");
         }else{
-            response.sendRedirect("index_1.jsp");
+            response.sendRedirect("Error1.jsp");
         }
     }
 

@@ -78,7 +78,7 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                    <form action="landingpage" method="POST">
+                    <form action="registerpage" method="POST">
                         <div class="form-group">
                           <label for="nombre-usuario">Nombre de Usuario</label>
                           <input type="text" class="form-control" id="nombre-usuario" name="nombre-usuario" aria-describedby="emailHelp" required>
@@ -96,7 +96,7 @@
                         </div>  
                         <div class="form-group">
                             <label for="exampleInputPassword1">Monto Inicial</label>
-                            <input type="number" class="form-control" id="monto" name="monto" required>
+                            <input type="number" class="form-control" id="amount" name="amount" required>
                             <small id="emailHelp" class="form-text text-muted">Escribe la cantidad de dinero a ingresar.</small>
                         </div>                    
                 </div>

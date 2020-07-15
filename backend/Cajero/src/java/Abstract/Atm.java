@@ -10,6 +10,8 @@ package Abstract;
  * @author Cristian
  */
 public interface Atm {
+    public int signIn(String name, String password);
+    public void register(String name, String password);
     public String showValue(String key);
     public void insertAmount(String key, int amount);
     public void removeAmount(String key, int amount);

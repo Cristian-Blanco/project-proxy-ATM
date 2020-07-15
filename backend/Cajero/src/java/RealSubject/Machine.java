@@ -12,11 +12,23 @@ import java.util.Map;
  * @author Cristian
  */
 public class Machine implements Atm{
-    //HashMap dic_password = new HashMap();
+    HashMap dictionary_password = new HashMap();
     HashMap dic_amount = new HashMap();
+    
+    @Override
+    public int signIn(String name, String password) {
+        if(dictionary_password.containsKey(name)){
+            if(password == dictionary_password.get(name).toString()){
+                return 1;
+            }
+            else{return 2;}
+        }
+        else{return 0;}
+    }
 
-    public void containKey(){
-        
+    @Override
+    public void register(String name, String password) {
+        dictionary_password.put(name,password);
     }
             
     @Override
@@ -54,6 +66,7 @@ public class Machine implements Atm{
             System.out.println("El nombre digitado no existe");
         }
     }
-    
 
+    
+    
 }

@@ -40,7 +40,7 @@
             <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesion</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -48,13 +48,13 @@
                 <div class="modal-body">
                     <form action="landingpage" method="POST">
                         <div class="form-group">
-                          <label for="nombre-usuario">Nombre de Usuario</label>
-                          <input type="text" class="form-control" id="nombre-usuario" aria-describedby="emailHelp">
+                          <label for="nombre-usuario">Cuenta</label>
+                          <input type="number" class="form-control" id="nombre-usuario" name="nombre-usuario" aria-describedby="emailHelp" required>
                           <small id="emailHelp" class="form-text text-muted">Escribe correctamente tu usuario de CajaGrupal.</small>
                         </div>
                         <div class="form-group">
                           <label for="exampleInputPassword1">Contraseña</label>
-                          <input type="password" class="form-control" id="password-user">
+                          <input type="password" class="form-control" id="password-user" name="password-user" required>
                           <small id="emailHelp" class="form-text text-muted">Escribe correctamente tu contraseña de CajaGrupal.</small>
                         </div>                      
                 </div>
@@ -72,7 +72,7 @@
             <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Registrar</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -81,17 +81,22 @@
                     <form action="landingpage" method="POST">
                         <div class="form-group">
                           <label for="nombre-usuario">Nombre de Usuario</label>
-                          <input type="text" class="form-control" id="nombre-usuario" aria-describedby="emailHelp">
+                          <input type="text" class="form-control" id="nombre-usuario" name="nombre-usuario" aria-describedby="emailHelp" required>
                           <small id="emailHelp" class="form-text text-muted">Escribe correctamente tu usuario de CajaGrupal.</small>
                         </div>
                         <div class="form-group">
+                          <label for="nombre-usuario">Nueva Cuenta</label>
+                          <input type="number" class="form-control" id="cuenta-usuario" name="cuenta-usuario" aria-describedby="emailHelp" required>
+                          <small id="emailHelp" class="form-text text-muted">Crea tu nueva cuenta en caja grupal.</small>
+                        </div>
+                        <div class="form-group">
                           <label for="exampleInputPassword1">Nueva Contraseña</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
+                          <input type="password" class="form-control" id="password-user" name="password-user" required>
                           <small id="emailHelp" class="form-text text-muted">Escribe correctamente tu contraseña de CajaGrupal.</small>
                         </div>  
                         <div class="form-group">
                             <label for="exampleInputPassword1">Monto Inicial</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="number" class="form-control" id="monto" name="monto" required>
                             <small id="emailHelp" class="form-text text-muted">Escribe la cantidad de dinero a ingresar.</small>
                         </div>                    
                 </div>

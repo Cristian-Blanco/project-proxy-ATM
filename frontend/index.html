@@ -3,79 +3,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <title>Cajero CajaGrupal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <header>
     <div class="contenedor">
-        <h1 class="icon-dog">My Pets</h1>
+        <h1 class="icon-dog">Cajero CajaGrupal</h1>
         <input type="checkbox" id="menu-bar">
-        <label class="fontawesome-align-justify" for="menu-bar"></label>
-                <nav class="menu">
-                    <a href="">Inicio</a>
-                    <a href="">Mascotas</a>
-                    <a href="">Blog</a>
-                    <a href="">Contacto</a>
-                </nav>
             </div>
   </header>
   <body>
     <main>
       <section id="banner">
-          <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+          <img src="https://images.unsplash.com/photo-1574288061782-da2d3f79a72e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80">
           <div class="contenedor">
-              <h2>Mascotas y niños felices</h2>
-              <p>¿Cuál es la mejor mascota para usted?</p>
-              <a href="#">Leer más</a>
+              <h2>Sientase Seguro y Feliz</h2>
+              <p>¿Por que preocuparse? su dinero esta en CajaGrupal</p>
+              <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#retirar-monto">
+                Retirar
+            </button> 
           </div>
       </section>
+
+      <div class="modal fade" id="retirar-monto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Retirar</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form action="" method="POST">
+                    <div class="form-group">
+                      <label for="nombre-usuario">Monto a Retirar</label>
+                      <input type="text" class="form-control" id="nombre-usuario" aria-describedby="emailHelp">
+                      <small id="emailHelp" class="form-text text-muted">Saldo Actual: -----</small>
+                    </div>                 
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-primary" value="Enviar">
+            </div>
+        </form>
+        </div>
+        </div>
+    </div>
       
       <section id="bienvenidos">
       <div class="contenedor">
-          <h2>BIENVENIDOS A NUESTRO CLUB</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ea eum alias reiciendis, tempore fugiat, distinctio nihil corrupti hic nostrum!</p>
+          <h2>BIENVENIDOS A CAJERO DE CAJAGRUPAL</h2>
+          <p>Tu saldo actual es de:</p>
           </div>
       </section>
       
       <section id="blog">
-          <h3>Lo último de nuestro blog</h3>
-          <div class="contenedor">
-              <article>
-                  <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
-                  <h4>Esconge tu mascota perfecta</h4>
-              </article>
-              <article>
-                  <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
-                  <h4>Los animales necesitan cariño</h4>
-              </article>
-              <article>
-                  <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
-                  <h4>Camina con tu mascota</h4>
-              </article>
-          </div>
+          <h3>Saldo Actual</h3>
       </section>
       
       <section id="info">
-          <h3>Para muchos de nosotros las mascotas no son simples compañeros, son miembros de la familia.</h3>
+          <h3>Dato Principal, Tu nombre</h3>
           <div class="contenedor">
               <div class="info-pet">
                   <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
-                  <h4>Max</h4>
-              </div>
-              <div class="info-pet">
-                  <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
-                  <h4>Jerry</h4>
-              </div>
-              <div class="info-pet">
-                  <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
-                  <h4>Tom</h4>
-              </div>
-              <div class="info-pet">
-                  <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
-                  <h4>Sam</h4>
+                  <h4>Nombre Completo</h4>
               </div>
           </div>
       </section>
   </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
   </body>
 </html>

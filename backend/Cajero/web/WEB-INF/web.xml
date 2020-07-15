@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>form</servlet-name>
-        <servlet-class>Servlet.form</servlet-class>
+        <servlet-name>landingpage</servlet-name>
+        <servlet-class>Servlet.landingpage</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>form</servlet-name>
-        <url-pattern>/form</url-pattern>
+        <servlet-name>landingpage</servlet-name>
+        <url-pattern>/landingpage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

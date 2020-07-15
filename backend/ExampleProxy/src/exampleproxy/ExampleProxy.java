@@ -22,8 +22,8 @@ public class ExampleProxy {
         IClient intento = new ClientProxy();
         System.out.println(intento.loginState(12345, 2015));
         intento.retirar(2000,12345, 2015);
-        System.out.println(intento.loginState(12347, 2015));
-        intento.retirar(2000,12347, 2015);
+        System.out.println(intento.loginState(12347, 2017));
+        intento.retirar(2000,12347, 2017);
     }
     
 }

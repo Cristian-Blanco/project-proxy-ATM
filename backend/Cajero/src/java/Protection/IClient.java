@@ -10,8 +10,8 @@ package Protection;
 
 public interface IClient {
     public String loginState(int IDCuenta, String password);
-    public void retirar(double cantidad, int IDCuenta, String password);
+    public String retirar(double cantidad, int IDCuenta, String password);
     public String registerState(String name, int IDcuenta, String password, double cantidad);//metodo añadido
-    
+    public double getDinero(int IDCuenta);
     
 }

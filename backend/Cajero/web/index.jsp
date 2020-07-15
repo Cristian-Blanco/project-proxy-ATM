@@ -78,7 +78,7 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                    <form action="registerpage" method="POST">
+                    <form action="ErrorTest" method="POST">
                         <div class="form-group">
                           <label for="nombre-usuario">Nombre de Usuario</label>
                           <input type="text" class="form-control" id="nombre-usuario" name="nombre-usuario" aria-describedby="emailHelp" required>

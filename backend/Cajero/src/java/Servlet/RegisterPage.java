@@ -8,6 +8,8 @@ package Servlet;
 import Protection.IClient;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -61,12 +63,19 @@ public class RegisterPage extends HttpServlet {
             "                    <h3 class=\"form-title\"><span>Felicidad Por Siempre</span></h3>\n" +
             "                </div>\n" +
             "                <label for=\"full-name\" class=\"form-label\">"+intento.registerState(name, account, password, amount)+"</label>\n" +
-            "                <a href=\"index.jsp\" type=\"button\" class=\"btn btn-primary btn-lg btn-block\">Inicio</a>      \n" +
+                         
             "            </div>\n" +
             "        </div>");
             out.println("</body>");
             out.println("</html>");
         }
+        try {
+            Thread.sleep(3000);
+            response.sendRedirect("index.jsp");
+        } catch (InterruptedException ex) {
+            Logger.getLogger(RegisterPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

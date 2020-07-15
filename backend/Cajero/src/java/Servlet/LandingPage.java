@@ -31,6 +31,7 @@ public class LandingPage extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        Redirect page = new Redirect();
         //Datos enviados desde el formulario en el index.jsp
 
         
@@ -77,10 +78,10 @@ public class LandingPage extends HttpServlet {
                         "            </button>\n" +
                         "            </div>\n" +
                         "            <div class=\"modal-body\">\n" +
-                        "                <form action=\"\" method=\"POST\">\n" +
+                        "                <form action=\"Amount\" method=\"POST\">\n" +
                         "                    <div class=\"form-group\">\n" +
                         "                      <label for=\"nombre-usuario\">Monto a Retirar</label>\n" +
-                        "                      <input type=\"text\" class=\"form-control\" id=\"nombre-usuario\" aria-describedby=\"emailHelp\">\n" +
+                        "                      <input type=\"text\" class=\"form-control\" id=\"money\" name=\"money\" aria-describedby=\"emailHelp\">\n" +
                         "                      <small id=\"emailHelp\" class=\"form-text text-muted\">Saldo Actual: -----</small>\n" +
                         "                    </div>                 \n" +
                         "            </div>\n" +
@@ -102,6 +103,7 @@ public class LandingPage extends HttpServlet {
                         "      \n" +
                         "      <section id=\"blog\">\n" +
                         "          <h3>Saldo Actual</h3>\n" +
+                                    "<h6>" + String.valueOf(Redirect.proxie.getDinero(page.getCuenta())) + "</h6>" +
                         "      </section>\n" +
                         "      \n" +
                         "      <section id=\"info\">\n" +
@@ -119,6 +121,7 @@ public class LandingPage extends HttpServlet {
                         "    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js\" integrity=\"sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI\" crossorigin=\"anonymous\"></script>");
             out.println("</body>");
             out.println("</html>");
+            System.out.println(request.getParameter("money"));
         }
     }
 

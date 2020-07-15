@@ -32,8 +32,11 @@ public class Amount extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        Redirect page = new Redirect();
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            System.out.println(request.getParameter("money"));
+            //Redirect.proxie.retirar(Double.parseDouble(request.getParameter("money")), page.getCuenta(), page.getPassword());
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -50,7 +53,8 @@ public class Amount extends HttpServlet {
                 "                    <h1 class=\"form-title\"><span>Cajero CajaGrupal</span></h1>\n" +
                 "                    <h3 class=\"form-title\"><span>Felicidad Por Siempre</span></h3>\n" +
                 "                </div>\n" +
-                "                <label for=\"full-name\" class=\"form-label\">TEXTO PROXY</label>\n" +
+                "                <label for=\"full-name\" class=\"form-label\">Operacion Exitosa</label>\n" +
+                    "                <label for=\"full-name\" class=\"form-label\">Recoja su dinero</label>\n" +
                 "                <a href=\"\" type=\"button\" class=\"btn btn-primary btn-lg btn-block\">Inicio</a>      \n" +
                 "            </div>\n" +
                 "        </div>");

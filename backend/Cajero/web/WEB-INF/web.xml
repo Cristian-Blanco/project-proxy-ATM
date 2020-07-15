@@ -16,6 +16,10 @@
         <servlet-name>Amount</servlet-name>
         <servlet-class>Servlet.Amount</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ErrorTest</servlet-name>
+        <servlet-class>Servlet.ErrorTest</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LandingPage</servlet-name>
         <url-pattern>/LandingPage</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>RegisterPage</servlet-name>
         <url-pattern>/RegisterPage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ErrorTest</servlet-name>
+        <url-pattern>/ErrorTest</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -38,7 +38,12 @@ public class Client implements IClient {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
+    @Override
+    public double getDinero(int IDCuenta){
+        return this.getDinero();
+    }
+    
     public double getDinero() {
         return dinero;
     }
@@ -66,7 +71,7 @@ public class Client implements IClient {
     @Override
     public String loginState(int IDCuenta, String password) {
         this.setState(true);
-        return "Accediendo a la cuenta " + IDCuenta;
+        return "Se ha accedido a la cuenta " + IDCuenta;
     }
     
     @Override
@@ -75,22 +80,16 @@ public class Client implements IClient {
     }
 
     @Override
-    public void retirar(double cantidad, int IDCuenta, String password) {
-        System.out.println("Retirando " + cantidad);
+    public String retirar(double cantidad, int IDCuenta, String password) {
+       
         if (cantidad > this.getDinero()) {
-            System.out.println("No posee fondos suficientes para realizar esta operacion");
+            return "No posee fondos suficientes para realizar esta operacion";
+           
         } else {
             this.setDinero(this.getDinero() - cantidad);
-            System.out.println("Recoja su dinero");
-            System.out.println("Su saldo actual es " + this.getDinero());
+            return "Su saldo actual es "+String.valueOf(this.getDinero());
+        
             
-        }
-        try {
-            this.setState(false);
-            Thread.sleep(5000);
-            System.out.println("Operacion terminada");
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

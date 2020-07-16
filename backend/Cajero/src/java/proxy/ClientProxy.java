@@ -66,8 +66,14 @@ public class ClientProxy implements IClient {
 
     @Override
     public String registerState(String name, int IDcuenta, String password, double cantidad) {
-        client.put(IDcuenta, new Client(name, cantidad, IDcuenta, password));
-        return client.get(IDcuenta).registerState(name, IDcuenta, password, cantidad);
+        if(client.containsKey(IDcuenta)){
+            return "Esta cuenta ya es existente";
+        }
+        else{
+            client.put(IDcuenta, new Client(name, cantidad, IDcuenta, password));
+            return client.get(IDcuenta).registerState(name, IDcuenta, password, cantidad);
+        }
+        
     }
 
     @Override

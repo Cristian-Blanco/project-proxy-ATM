@@ -24,9 +24,7 @@
                 </div>
                 <!-- Button trigger modal -->
                 <label class="form-label">La cuenta o la contraseña son incorrectas</label>
-                <a type="button" class="button-submit" href="index.jsp">
-                    Volver
-                </a>              
+                <a href="index.jsp" type="button" class="btn btn-primary btn-lg btn-block">Inicio</a>             
 
                 
                 

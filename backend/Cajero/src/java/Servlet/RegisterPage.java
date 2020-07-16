@@ -66,7 +66,7 @@ public class RegisterPage extends HttpServlet {
             "                    <h3 class=\"form-title\"><span>Felicidad Por Siempre</span></h3>\n" +
             "                </div>\n" +
             "                <label for=\"full-name\" class=\"form-label\">"+intento.registerState(name, account, password, amount)+"</label>\n" +
-                         
+           "                <a href=\"index.jsp\" type=\"button\" class=\"btn btn-primary btn-lg btn-block\">Inicio</a>      \n"+
             "            </div>\n" +
             "        </div>");
             out.println("</body>");

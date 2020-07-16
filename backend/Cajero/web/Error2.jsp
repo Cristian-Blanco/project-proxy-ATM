@@ -24,7 +24,7 @@
                 </div>
                 <!-- Button trigger modal -->
                 <label class="form-label">La cuenta ya existe</label>
-                <a type="button" class="button-submit" href="index.jsp">
+                 <a href="index.jsp" type="button" class="btn btn-primary btn-lg btn-block">Inicio</a>
                     Volver
                 </a>              
 

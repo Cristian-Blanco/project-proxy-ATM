@@ -19,8 +19,8 @@ import proxy.ClientProxy;
  */
 public class Redirect extends HttpServlet {
 
-    private int cuenta;
-    private String password;
+    private static int cuenta;
+    private static String password;
     
     public static IClient proxie = new ClientProxy();
 
@@ -32,14 +32,24 @@ public class Redirect extends HttpServlet {
         return password;
     }
 
+    public void setCuenta(int cuenta) {
+        this.cuenta = cuenta;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+
 
     
     
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        this.cuenta = Integer.parseInt(request.getParameter("nombre-usuario"));
-        this.password = request.getParameter("password-user");
+        this.setCuenta(Integer.parseInt(request.getParameter("nombre-usuario")));
+        this.setPassword(request.getParameter("password-user"));
+       
        
         if (proxie.loginState(Integer.parseInt(request.getParameter("nombre-usuario")), request.getParameter("password-user")).equals("Se ha accedido a la cuenta " + this.cuenta)) {
             response.sendRedirect("LandingPage");

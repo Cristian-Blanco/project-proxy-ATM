@@ -6,7 +6,7 @@
     </servlet>
     <servlet>
         <servlet-name>RegisterPage</servlet-name>
-        <servlet-class>Servlet.RegisterPaget</servlet-class>
+        <servlet-class>Servlet.RegisterPage</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Redirect</servlet-name>

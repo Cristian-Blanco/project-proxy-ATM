@@ -7,6 +7,8 @@ package Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,32 +37,45 @@ public class Amount extends HttpServlet {
         Redirect page = new Redirect();
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            System.out.println(request.getParameter("money"));
+            System.out.println();
             //Redirect.proxie.retirar(Double.parseDouble(request.getParameter("money")), page.getCuenta(), page.getPassword());
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<meta charset=\"UTF-8\">\n" +
-                "        <title>Cajero CajaGrupal</title>\n" +
-                "        <link rel=\"icon\"  type=\"image/png\" href=\"\">\n" +
-                "        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\" integrity=\"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk\" crossorigin=\"anonymous\">\n" +
-                "        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/homepage_style.css\">");            
+            out.println("<meta charset=\"UTF-8\">\n"
+                    + "        <title>Cajero CajaGrupal</title>\n"
+                    + "        <link rel=\"icon\"  type=\"image/png\" href=\"\">\n"
+                    + "        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css\" integrity=\"sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk\" crossorigin=\"anonymous\">\n"
+                    + "        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/homepage_style.css\">");
             out.println("</head>");
             out.println("<body>");
-            out.println("<div class=\"container\">\n" +
-                "            <div class=\"form\">\n" +
-                "                <div class=\"form-header\">\n" +
-                "                    <h1 class=\"form-title\"><span>Cajero CajaGrupal</span></h1>\n" +
-                "                    <h3 class=\"form-title\"><span>Felicidad Por Siempre</span></h3>\n" +
-                "                </div>\n" +
-                "                <label for=\"full-name\" class=\"form-label\">Operacion Exitosa</label>\n" +
-                    "                <label for=\"full-name\" class=\"form-label\">Recoja su dinero</label>\n" +
-                "                <a href=\"\" type=\"button\" class=\"btn btn-primary btn-lg btn-block\">Inicio</a>      \n" +
-                "            </div>\n" +
-                "        </div>");
-            out.println("</body>");
-            out.println("</html>");
+            out.println("<div class=\"container\">\n"
+                    + "            <div class=\"form\">\n"
+                    + "                <div class=\"form-header\">\n"
+                    + "                    <h1 class=\"form-title\"><span>Cajero CajaGrupal</span></h1>\n"
+                    + "                    <h3 class=\"form-title\"><span>Felicidad Por Siempre</span></h3>\n"
+                    + "                </div>\n");
+            if (Redirect.proxie.retirar(Double.parseDouble(request.getParameter("money")), page.getCuenta(), page.getPassword()).equals("No posee fondos suficientes para realizar esta operacion")) {
+                out.println("                <label for=\"full-name\" class=\"form-label\">Operacion Fallida</label>\n"
+                        + "                <label for=\"full-name\" class=\"form-label\">No posee fondos suficientes para realizar esta operacion</label>\n"
+                        + "                <a href=\"index.jsp\" type=\"button\" class=\"btn btn-primary btn-lg btn-block\">Inicio</a>      \n"
+                        + "            </div>\n"
+                        + "        </div>");
+                out.println("</body>");
+                out.println("</html>");
+            } else {
+                out.println("                <label for=\"full-name\" class=\"form-label\">Operacion Exitosa</label>\n"
+                        + "                <label for=\"full-name\" class=\"form-label\">Recoja su dinero</label>\n"
+                        + "                <a href=\"index.jsp\" type=\"button\" class=\"btn btn-primary btn-lg btn-block\">Inicio</a>      \n"
+                        + "            </div>\n"
+                        + "        </div>");
+                out.println("</body>");
+                out.println("</html>");
+
+            }
+
         }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

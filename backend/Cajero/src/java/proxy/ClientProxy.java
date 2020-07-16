@@ -12,14 +12,23 @@ import Protection.IClient;
 public class ClientProxy implements IClient {
 
     public static HashMap<Integer, Client> client;
-    private boolean state;
+    private static boolean state;
 
-    static {
+    public ClientProxy() {
         client = new HashMap<>();
         client.put(12345, new Client("Pepito Perez", 200000, 12345, "2015"));
         client.put(12346, new Client("Jack Luna", 300000, 12346, "2016"));
         client.put(12347, new Client("Cristian Martinez", 300000, 12347, "2017"));
     }
+    
+    
+
+    /*static {
+        client = new HashMap<>();
+        client.put(12345, new Client("Pepito Perez", 200000, 12345, "2015"));
+        client.put(12346, new Client("Jack Luna", 300000, 12346, "2016"));
+        client.put(12347, new Client("Cristian Martinez", 300000, 12347, "2017"));
+    }*/
 
     public static HashMap<Integer, Client> getClient() {
         return client;
@@ -29,12 +38,12 @@ public class ClientProxy implements IClient {
         ClientProxy.client = client;
     }
 
-    public boolean isState() {
+    public static boolean isState() {
         return state;
     }
 
-    public void setState(boolean state) {
-        this.state = state;
+    public static void setState(boolean state) {
+        ClientProxy.state = state;
     }
 
     @Override
@@ -57,12 +66,8 @@ public class ClientProxy implements IClient {
 
     @Override
     public String registerState(String name, int IDcuenta, String password, double cantidad) {
-        if (client.containsKey(IDcuenta)) {
-            return "La cuenta ya existe por favor ingrese una nueva cuenta";
-        } else {
-            client.put(IDcuenta, new Client(name, cantidad, IDcuenta, password));
-            return client.get(IDcuenta).registerState(name, IDcuenta, password, cantidad);
-        }
+        client.put(IDcuenta, new Client(name, cantidad, IDcuenta, password));
+        return client.get(IDcuenta).registerState(name, IDcuenta, password, cantidad);
     }
 
     @Override
@@ -71,10 +76,16 @@ public class ClientProxy implements IClient {
         return client.get(IDCuenta).retirar(cantidad, IDCuenta, password);
 
     }
-    @Override
-    public double getDinero(int IDCuenta){
-        return client.get(IDCuenta).getDinero();
-    }
 
+    @Override
+    public double getDinero(int IDCuenta) {
+
+        return client.get(IDCuenta).getDinero();
+
+    }
+    @Override
+    public String getNombre(int IDCuenta){
+        return client.get(IDCuenta).getNombre();
+    }
 
 }

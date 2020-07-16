@@ -14,23 +14,21 @@ public class Client implements IClient {
     private double dinero;
     private int IDCuenta;
     private String password;
-    private boolean state;
+ 
 
     public Client(String nombre, double dinero, int IDCuenta, String password) {
+
         this.nombre = nombre;
         this.dinero = dinero;
         this.IDCuenta = IDCuenta;
         this.password = password;
     }
 
-    public boolean isState() {
-        return state;
+   
+    @Override
+    public String getNombre(int IDCuenta) {
+        return this.getNombre();
     }
-
-    public void setState(boolean state) {
-        this.state = state;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -70,7 +68,7 @@ public class Client implements IClient {
 
     @Override
     public String loginState(int IDCuenta, String password) {
-        this.setState(true);
+        
         return "Se ha accedido a la cuenta " + IDCuenta;
     }
     

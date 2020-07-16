@@ -20,10 +20,10 @@ import proxy.ClientProxy;
  * @author jackl
  */
 public class ErrorTest extends HttpServlet {
-     private String nombre;
-     private int IDcuenta;
-     private String password;
-     private double cantidad;
+     private static String nombre;
+     private static int IDcuenta;
+     private static String password;
+     private static double cantidad;
      public static IClient proxie = new ClientProxy();;
         /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,6 +34,10 @@ public class ErrorTest extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+     
+    
+
+     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -47,6 +51,38 @@ public class ErrorTest extends HttpServlet {
         }else{
             response.sendRedirect("RegisterPage");
         }
+    }
+    
+    public static String getNombre() {
+        return nombre;
+    }
+
+    public static void setNombre(String nombre) {
+        ErrorTest.nombre = nombre;
+    }
+
+    public static int getIDcuenta() {
+        return IDcuenta;
+    }
+
+    public static void setIDcuenta(int IDcuenta) {
+        ErrorTest.IDcuenta = IDcuenta;
+    }
+
+    public static String getPassword() {
+        return password;
+    }
+
+    public static void setPassword(String password) {
+        ErrorTest.password = password;
+    }
+
+    public static double getCantidad() {
+        return cantidad;
+    }
+
+    public static void setCantidad(double cantidad) {
+        ErrorTest.cantidad = cantidad;
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -87,5 +123,11 @@ public class ErrorTest extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    String getName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 
 }

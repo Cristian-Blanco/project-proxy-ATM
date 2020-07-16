@@ -36,11 +36,14 @@ public class RegisterPage extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
         //datos para el registro
-        String name = request.getParameter("nombre-usuario");
-        int account = Integer.parseInt(request.getParameter("cuenta-usuario"));
-        String password = request.getParameter("password-user");
-        double amount = Double.parseDouble(request.getParameter("amount"));
+        String name = ErrorTest.getNombre();
+        
+        
+        int account = ErrorTest.getIDcuenta();
+        String password = ErrorTest.getPassword();
+        double amount = ErrorTest.getCantidad();
         
         IClient intento = new ClientProxy();
         
@@ -69,12 +72,7 @@ public class RegisterPage extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
-        try {
-            Thread.sleep(3000);
-            response.sendRedirect("index.jsp");
-        } catch (InterruptedException ex) {
-            Logger.getLogger(RegisterPage.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
         
     }
 
